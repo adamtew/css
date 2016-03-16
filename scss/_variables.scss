@@ -1,0 +1,19 @@
+// Colors
+
+$colors: (
+  bg: #222222,
+  main-1: red,
+  main-2: blue,
+  accent-1: gray,
+  accent-2: dark-gray,
+  border-1: #CCCCCC,
+  border-2: #fafafa
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown #{$key} in colors map";
+  @return null;
+}
