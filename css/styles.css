@@ -6,6 +6,21 @@
   width: 100%;
   height: 100%; }
 
+.header {
+  background: linear-gradient(to top right, #4339A0, #4EC4CA);
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.footer {
+  height: 100px;
+  background: rgba(50, 50, 50, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1; }
+
 .project-window {
   display: block;
   float: left;
@@ -35,6 +50,14 @@
 * {
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+h1 {
+  font-size: 74px;
+  color: white; }
 
 body {
   background: #222222; }
