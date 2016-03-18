@@ -10,10 +10,26 @@ $colors: (
   border-2: #fafafa
 );
 
+$breakpoints: (
+  phone: 400px,
+  phone-lg: 649px,
+  tablet: 767px,
+  tablet-lg: 991px,
+  desktop-lg: 1024px
+);
+
 @function color($key) {
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
   }
   @warn "Unknown #{$key} in colors map";
+  @return null;
+}
+
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown #{$key} in breakpoints map";
   @return null;
 }
